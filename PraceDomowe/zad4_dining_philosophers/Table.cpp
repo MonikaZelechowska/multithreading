@@ -17,20 +17,19 @@ Table::Table(int number):
 }
 
 void Table::showTable(){
-    std::cout << std::endl;
+    std::string tableView("\n");
+    
     for(auto& elem: philosophers){
-        if(elem.getHaveForks() == true){
-            std::stringstream eatingPhilosopher;
-            eatingPhilosopher << "-" << elem.getPhilosopherName() << "-";
-            std::cout << eatingPhilosopher.rdbuf();
-        }
-        else{
-            std::stringstream notEatingPhilosopher;
-            notEatingPhilosopher << " " << elem.getPhilosopherName() << " ";
-            std::cout << notEatingPhilosopher.rdbuf();
-        }
+        if(elem.getHaveForks() == true)
+            tableView += "-" + elem.getPhilosopherName() + "-";
+        else tableView += " " + elem.getPhilosopherName() + " ";
     }
-    std::cout << std::endl;
+    
+    tableView += '\n';
+    
+    std::stringstream ssTableView;
+    ssTableView << tableView;
+    std::cout << ssTableView.rdbuf();
 }
 
 bool Table::stopEating(){

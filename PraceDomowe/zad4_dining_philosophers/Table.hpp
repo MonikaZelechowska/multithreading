@@ -2,6 +2,8 @@
 
 #include "Fork.hpp"
 #include "Philosopher.hpp"
+#include <sstream>
+#include <string>
 #include <vector>
 
 class Table{ 

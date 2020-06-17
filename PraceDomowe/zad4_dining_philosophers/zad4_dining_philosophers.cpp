@@ -16,7 +16,7 @@ void diner(){
     }
 
     std::stringstream dinerStop;
-    dinerStop <<" ---END OF DININD---." << std::endl;
+    dinerStop <<" ---END OF DINING---." << std::endl;
     std::cout << dinerStop.rdbuf();
 
 }

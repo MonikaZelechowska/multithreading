@@ -29,10 +29,9 @@ void Philosopher::eat(){
 
 void Philosopher::think(){
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    std::stringstream trinkString;
-    trinkString << "   " << this->philosopherName << " is thinking." << std::endl;
-    std::cout << trinkString.rdbuf();
-
+    std::stringstream thinkString;
+    thinkString << "   " << this->philosopherName << " is thinking." << std::endl;
+    std::cout << thinkString.rdbuf();
 }
 
 void Philosopher::dine(){
