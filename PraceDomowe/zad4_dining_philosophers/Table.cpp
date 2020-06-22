@@ -34,8 +34,12 @@ void Table::showTable(){
 
 bool Table::stopEating(){
     bool checker = true;
-    for(auto& elem: philosophers){
-        checker = (checker and not(elem.getHaveForks()));
-    }
+    auto it = philosophers.begin();
+    
+    do{
+        if(it->getHaveForks() == true)
+            checker = false;
+    }while(checker and ++it != philosophers.end());
+    
     return checker;
 }
