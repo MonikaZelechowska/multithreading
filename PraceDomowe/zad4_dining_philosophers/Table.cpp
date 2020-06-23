@@ -29,7 +29,7 @@ void Table::showTable(){
     
     std::stringstream ssTableView;
     ssTableView << tableView;
-    std::cout << ssTableView.rdbuf();
+    std::cout << ssTableView.str();
 }
 
 bool Table::stopEating(){

@@ -6,7 +6,7 @@
 void diner(){
     std::stringstream dinerStart;
     dinerStart <<"--START OF DINING---" << std::endl;
-    std::cout << dinerStart.rdbuf();
+    std::cout << dinerStart.str();
 
     Table table(5);
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
@@ -17,7 +17,7 @@ void diner(){
 
     std::stringstream dinerStop;
     dinerStop <<" ---END OF DINING---." << std::endl;
-    std::cout << dinerStop.rdbuf();
+    std::cout << dinerStop.str();
 
 }
 
